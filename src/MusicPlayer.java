@@ -91,7 +91,6 @@ public class MusicPlayer {
 
         forwardButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event){
-                //moves the song forward by 15s
                 forward(songSelector.getSelectedItem().toString());
                 time = clip.getMicrosecondPosition();
             }
@@ -99,7 +98,6 @@ public class MusicPlayer {
 
         rewindButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event){
-                //moves the song backward by 15s
                 rewind(songSelector.getSelectedItem().toString());
                 time = clip.getMicrosecondPosition();
             }
@@ -182,7 +180,6 @@ public class MusicPlayer {
 
     public void stopTimer(){
         if (timer != null) {
-            //below saves the time of the music when stopped
             time = clip.getMicrosecondPosition();
             timer.stop();
         }
